@@ -26,14 +26,14 @@ The RAVDESS dataset is used for training and testing the emotion detection model
 
 ### Emotion Labels in RAVDESS Dataset:
 
-- **01**: Neutral
-- **02**: Calm
-- **03**: Happy
-- **04**: Sad
-- **05**: Angry
-- **06**: Fearful
-- **07**: Disgust
-- **08**: Surprised
+- **1**: Neutral
+- **2**: Calm
+- **3**: Happy
+- **4**: Sad
+- **5**: Angry
+- **6**: Fearful
+- **7**: Disgust
+- **8**: Surprised
 
 ## Installation
 
