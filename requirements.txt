@@ -9,5 +9,6 @@ scipy==1.11.3
 soundfile==0.12.1
 speechrecognition==3.9.0
 tensorflow==2.14.0
+keras==2.14.0
 tqdm==4.66.1
 wave==0.0.2
