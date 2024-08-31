@@ -1,2 +1,2 @@
-# speech-emotion-recognition
-This is an ML project for Speech Emotion Recognition.
+# Speech Emotion Recognition
+Project implementing CNN for Speech Emotion Recognition. This uses 
