@@ -12,11 +12,9 @@ This project implements a Speech Emotion Recognition system using machine learni
 - [Model Training](#model-training)
 - [Model Testing](#model-testing)
 - [Prediction](#prediction)
-- [Usage](#usage)
 - [Visualization](#visualization)
 - [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+- [Next Steps](#next-steps)
 
 ## Overview
 
@@ -62,6 +60,11 @@ To install these dependencies, run:
 pip install numpy pandas librosa soundfile scikit-learn tensorflow keras python_speech_features noisereduce matplotlib tqdm pyaudio scipy speech_recognition
 ```
 
+Or, Run the following script:  
+```
+pip install -r requirements.txt
+```
+
 ## Data Preprocessing
 
 1. **Load Audio Files**: The audio files are loaded from the `audio_speech_actors_01-24` directory.
@@ -80,8 +83,6 @@ Features are extracted from the audio files to train the model. The following fe
 - **Chroma Features**: Represents 12 different pitch classes.
 - **Mel Spectrogram**: Provides a perceptual representation of the audio signal.
 
-The `extract_feature` function is used to compute these features for each audio file.
-
 ## Model Training
 
 The project uses a **Multi-Layer Perceptron (MLP)** classifier from `scikit-learn` to classify emotions based on the extracted features. The model is trained with the following parameters:
@@ -92,6 +93,9 @@ The project uses a **Multi-Layer Perceptron (MLP)** classifier from `scikit-lear
 - `hidden_layer_sizes=(300,)`
 - `learning_rate='adaptive'`
 - `max_iter=500`
+
+![image](https://github.com/user-attachments/assets/9dfad79e-7846-4b46-a319-8e003a06e279)
+
 
 After training, the model is saved as `Emotion_Voice_Detection_Model.pkl` using the `pickle` library.
 
@@ -110,3 +114,44 @@ The trained model can predict emotions for new audio recordings. The following s
 3. **Predict Emotion**: The extracted features are fed into the trained model to predict the emotion.
 
 
+## Visualization
+The sample illustrations of the audio features are as follows:  
+
+![image](https://github.com/user-attachments/assets/d1bb8a74-4889-4308-832c-c711276297e3)  
+  
+![image](https://github.com/user-attachments/assets/488a1bec-64c1-498f-84e1-0cf49cbaf558)  
+  
+![image](https://github.com/user-attachments/assets/b7301b0d-2298-44e8-9cf4-06f1c0e1942f)  
+  
+![image](https://github.com/user-attachments/assets/f1797b81-f691-47ca-a7c7-dffdba27fa12)  
+
+
+
+## Results  
+
+The final result of the new audio sample will be given in a Numpy array format as follows:  
+`array(['calm', 'fearful'], dtype='<U8')`  
+
+## Next Steps
+
+To enhance the Emotion Voice Detection model and expand its capabilities, the following steps are suggested:
+
+1. **Expand the Dataset**
+
+2. **Improve Model Architecture**
+
+3. **Optimize Hyperparameters**
+
+4. **Real-time Emotion Detection**
+
+5. **Add Support for Multiple Languages**
+
+6. **Enhance Emotion Categories**
+
+7. **Develop a User Interface**
+
+8. **Conduct Extensive Testing**
+
+9. **Collaborate and Open Source**
+
+These next steps aim to improve the performance, usability, and versatility of the Emotion Voice Detection model, making it more suitable for real-world applications and diverse environments.
