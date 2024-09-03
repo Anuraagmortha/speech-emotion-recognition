@@ -17,6 +17,8 @@ from glob import glob
 from tqdm import tqdm
 from scipy import signal
 from scipy.io import wavfile
+from scipy.io import wavfile as wav
+from scipy.fftpack import fft
 from python_speech_features import mfcc , logfbank
 from tensorflow.keras.layers import Conv2D,MaxPool2D, Flatten, LSTM
 from keras.layers import Dropout,Dense,TimeDistributed
@@ -151,10 +153,6 @@ def calc_fft(y,rate):
 
 # Commented out IPython magic to ensure Python compatibility.
 # Here The Data Set is loaded and plots are Visualised by Calling the Plotting Functions .
-import matplotlib.pyplot as plt
-from scipy.io import wavfile as wav
-from scipy.fftpack import fft
-import numpy as np
 for file in range(0 , len(listOfFiles) , 1):
     rate, data = wav.read(listOfFiles[file])
     fft_out = fft(data)
