@@ -70,7 +70,7 @@ def envelope(y , rate, threshold):
     return mask
 
 #Plotting the Basic Graphs for understanding of Audio Files :
-for file in range(0 , len(listOfFiles) , 1):
+for file in range(len(listOfFiles)):
     audio , sfreq = lr.load(listOfFiles[file])
     time = np.arange(0 , len(audio)) / sfreq
 
