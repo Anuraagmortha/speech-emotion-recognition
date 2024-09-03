@@ -46,7 +46,7 @@ len(listOfFiles)
 
 #Use the Speech-Recognition API to get the Raw Text from Audio Files.
 r=sr.Recognizer()
-for file in range(0 , len(listOfFiles) , 1):
+for file in range(len(listOfFiles)):
     with sr.AudioFile(listOfFiles[file]) as source:
         audio = r.listen(source)
         try:
@@ -167,7 +167,7 @@ fft={}
 fbank={}
 mfccs={}
 # load data
-for file in range(0 , len(listOfFiles) , 1):
+for file in range(len(listOfFiles)):
 #     rate, data = wavfile.read(listOfFiles[file])
      signal,rate =librosa.load(listOfFiles[file] , sr=44100)
      mask = envelope(signal , rate , 0.0005)
