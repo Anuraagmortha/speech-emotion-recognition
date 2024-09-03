@@ -154,7 +154,7 @@ def calc_fft(y,rate):
 
 # Commented out IPython magic to ensure Python compatibility.
 # Here The Data Set is loaded and plots are Visualised by Calling the Plotting Functions .
-for file in range(0 , len(listOfFiles) , 1):
+for file in range(len(listOfFiles)):
     rate, data = wav.read(listOfFiles[file])
     fft_out = fft(data)
 #     %matplotlib inline
