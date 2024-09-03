@@ -5,6 +5,7 @@ import pyaudio
 import wave
 import librosa
 import pickle
+import librosa.display
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -314,8 +315,6 @@ y_pred=Emotion_Voice_Detection_Model.predict(x_test)
 y_pred
 
 #Store the Prediction probabilities into CSV file
-import numpy as np
-import pandas as pd
 y_pred1 = pd.DataFrame(y_pred, columns=['predictions'])
 y_pred1['file_names'] = test_filename
 print(y_pred1)
@@ -361,10 +360,6 @@ wf.close()
 #The file 'output10.wav' in the next cell is the file that was recorded live using the code :
 data, sampling_rate = librosa.load('output10.wav')
 # %matplotlib inline
-import os
-import pandas as pd
-import librosa.display
-import glob
 
 plt.figure(figsize=(15, 5))
 librosa.display.waveshow(data, sr=sampling_rate)
