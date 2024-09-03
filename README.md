@@ -22,7 +22,7 @@ Speech Emotion Recognition (SER) is the process of identifying human emotions fr
 
 ## Dataset
 
-The RAVDESS dataset is used for training and testing the emotion detection model. It contains 1,439 audio files from 24 different actors, each portraying various emotions. The dataset is stored in the `audio_speech_actors_01-24` directory.
+The RAVDESS dataset is used for training and testing the emotion detection model. It contains 1,440 audio files from 24 different actors, each portraying various emotions. The dataset is stored in the `audio_speech_actors_01-24` directory.
 
 ### Emotion Labels in RAVDESS Dataset:
 
